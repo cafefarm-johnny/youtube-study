@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Center(),
+      bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
 }
