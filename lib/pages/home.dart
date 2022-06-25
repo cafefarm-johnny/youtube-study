@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.add_alert,
+              Icons.notifications,
             ),
           ),
           IconButton(
