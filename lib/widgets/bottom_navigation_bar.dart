@@ -11,7 +11,7 @@ class MyBottomNavigationBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
-                Icons.home,
+                Icons.home_filled,
               ),
               const Text("홈"),
             ],
@@ -35,7 +35,7 @@ class MyBottomNavigationBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
-                Icons.playlist_play,
+                Icons.subscriptions_sharp,
               ),
               const Text("구독"),
             ],
