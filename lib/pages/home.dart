@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_clone/widgets/bottom_navigation_bar.dart';
+import 'package:youtube_clone/widgets/stream_list_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Center(),
+      body: StreamListView(),
       bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
