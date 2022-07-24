@@ -17,36 +17,40 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text('YouTube'),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.cast_connected,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.notifications,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.search,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.person,
-            ),
-          ),
-        ],
+        title: const Text('YouTube'),
+        actions: _createActions(),
       ),
       body: StreamListView(),
       bottomNavigationBar: MyBottomNavigationBar(),
     );
+  }
+
+  List<IconButton> _createActions() {
+    return [
+      IconButton(
+        onPressed: () {},
+        icon: const Icon(
+          Icons.cast_connected,
+        ),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: const Icon(
+          Icons.notifications,
+        ),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: const Icon(
+          Icons.search,
+        ),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: const Icon(
+          Icons.person,
+        ),
+      ),
+    ];
   }
 }
