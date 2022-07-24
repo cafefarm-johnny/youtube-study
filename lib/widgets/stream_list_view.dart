@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class StreamListView extends StatelessWidget {
+  const StreamListView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,42 +23,75 @@ class StreamListView extends StatelessWidget {
             ],
           ),
         ),
+        Container(
+          color: Colors.lightBlueAccent,
+          child: Column(
+            children: [
+              _createThumbnailWidget(),
+              _createStreamTitle(),
+            ],
+          ),
+        ),
+        Container(
+          color: Colors.lightBlueAccent,
+          child: Column(
+            children: [
+              _createThumbnailWidget(),
+              _createStreamTitle(),
+            ],
+          ),
+        ),
+        Container(
+          color: Colors.lightBlueAccent,
+          child: Column(
+            children: [
+              _createThumbnailWidget(),
+              _createStreamTitle(),
+            ],
+          ),
+        ),
       ],
     );
   }
 
   Widget _createThumbnailWidget() {
-    return Container(
-      child: Image.asset(
-        "images/media/thumb_1.jpg",
-        fit: BoxFit.cover,
-      ),
+    return Image.asset(
+      "images/media/thumb_1.jpg",
+      fit: BoxFit.cover,
     );
   }
 
   Widget _createStreamTitle() {
     return Row(
       children: [
-        Container(
-          margin: EdgeInsets.all(5),
-          child: ClipOval(
-            child: Container(
-              child: Image.asset(
-                "images/user/profile/profile_1.png",
-              ),
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
+        _createAvatar(),
+        _createTitle(),
+      ],
+    );
+  }
+
+  Widget _createAvatar() {
+    return Container(
+      margin: const EdgeInsets.all(5),
+      child: ClipOval(
+        child: Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Image.asset(
+            "images/user/profile/profile_1.png",
           ),
         ),
-        Container(
-          child: Text("오늘 점심은 참치캔이 좋을까 추르가 좋을까?"),
-          padding: EdgeInsets.all(10),
-        ),
-      ],
+      ),
+    );
+  }
+
+  Widget _createTitle() {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      child: const Text("오늘 점심은 참치캔이 좋을까 추르가 좋을까?"),
     );
   }
 }
